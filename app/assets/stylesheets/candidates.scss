@@ -1,0 +1,36 @@
+// Place all the styles related to the Candidates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn.btn-primary{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: auto;
+  }
+
+#file{
+    margin-left: 1px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: line-height-computed;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: table-cell-padding;
+        line-height: line-height-base;
+        vertical-align: top;
+        border-top: 1px solid table-border-color;
+      }
+    }
+  }
+}

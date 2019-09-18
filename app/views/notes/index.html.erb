@@ -1,0 +1,46 @@
+<div id="main-container" class="container">
+    <div class="row">
+        <div class="col-md-10">
+        <h1><p class="text-primary">Notes Table</p></h1>
+        <%= flash[:notice] %>
+        <span class="border border-success">
+        <table>
+            <thead>
+                <th>E-mail</th>
+                <th>Note</th>
+            </thead>
+            <tbody>
+                <% @notes.order("email asc").each do |note| %>
+                    <tr>
+                        <td><%= note.email %></td>
+                        <td><%= note.note %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+        </span>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+<div>
+ <div id="main-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            <h4> Import data with notes! </h4>
+                <%= form_tag import_notes_path, multipart: true do %>
+                <%= file_field_tag :file %>
+         </div>
+                <div class="col-md-3">
+                <%= submit_tag "Import CSV", class: 'btn btn-primary' %>
+                <% end %> 
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+

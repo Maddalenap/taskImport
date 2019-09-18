@@ -1,0 +1,47 @@
+<div id="main-container" class="container">
+    <div class="row">
+        <div class="col-md-10">
+        <h1><p class="text-primary">Candidates Table</p></h1>
+        <%= flash[:notice] %>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th>Phone</th>
+                <th>Job</th>
+                <th>Created_at</th>
+            </thead>
+            <tbody>
+                <% @candidates.order("name asc").each do |candidate| %>
+                    <tr>
+                        <td><%= candidate.name %></td>
+                        <td><%= candidate.email %></td>
+                        <td><%= candidate.phone %></td>
+                        <td><%= candidate.job %></td>
+                        <td><%= candidate.created_at %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
+
+<div>
+ <div id="main-container" class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+            <h4> Import data with candidates! </h4>
+                <%= form_tag import_candidates_path, multipart: true do %>
+                <%= file_field_tag :file %>
+         </div>
+                <div class="col-md-3">
+                <%= submit_tag "Import CSV", class: 'btn btn-primary' %>
+                <% end %> 
+                </div>
+        </div>
+    </div>
+</div>
