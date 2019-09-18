@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This's taskImport. You can copy CSV files(candidates, notes) to database. :computer:
+Choose Import CSV 1(for candidates) or Import CSV 2(for notes) and use button "Import CSV".
 
-Things you may want to cover:
+# Setup
 
-* Ruby version
+Make sure you have Ruby installed.
 
-* System dependencies
+♦️ Ruby version: 2.5.3
 
-* Configuration
+Run in your terminal
+```
+git clone git@github.com:Maddalenap/taskImport.git
 
-* Database creation
+cd taskImport
 
-* Database initialization
+bundle install
 
-* How to run the test suite
+rails db:migrate
+```
+And run with
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+rails server
+```
 
-* Deployment instructions
+You can also use for debugging
+```
+rails console 
+rails routes
+```
 
-* ...
